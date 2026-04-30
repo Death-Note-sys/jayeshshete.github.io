@@ -407,38 +407,56 @@
   }
 
   /* CONTACT */
-  .contact-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .contact-info p {
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
+  .contact-wrap { max-width: 600px; }
+  .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
   .contact-links { display: flex; flex-direction: column; gap: 1rem; }
   .contact-link {
-    display: flex; align-items: center; gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     text-decoration: none;
-    color: var(--text);
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 1rem 1.25rem;
-    border: 1px solid var(--border);
     border-radius: 6px;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    border: 1px solid var(--border);
+    background: rgba(0,255,136,0.02);
   }
-  .contact-link:hover {
-    border-color: rgba(0,255,136,0.4);
-    background: rgba(0,255,136,0.04);
-    transform: translateX(4px);
+  .contact-text {
+    color: var(--text);
+    letter-spacing: 0.05em;
   }
   .contact-link-icon {
     color: var(--accent);
-    font-size: 1rem;
-    min-width: 20px;
+    font-size: 0.9rem;
+    min-width: 30px;
+  }
+  .contact-link.neon:hover {
+    transform: translateX(6px);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(0,255,136,0.3), 0 0 25px rgba(0,255,136,0.15);
+    background: rgba(0,255,136,0.05);
+  }
+  .contact-link.blue .contact-link-icon { color: var(--accent2); }
+  .contact-link.blue:hover {
+    border-color: var(--accent2);
+    box-shadow: 0 0 12px rgba(0,204,255,0.3), 0 0 25px rgba(0,204,255,0.15);
+    background: rgba(0,204,255,0.05);
+  }
+  .contact-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,255,136,0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .contact-link:hover::before { opacity: 1; }
+  .contact-link.blue::before {
+    background: linear-gradient(120deg, transparent, rgba(0,204,255,0.15), transparent);
   }
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -693,31 +711,16 @@
     <div class="contact-info">
       <p>I'm actively looking for internship and entry-level opportunities. If you have a role, a project idea, or just want to talk tech — my inbox is open.</p>
       <div class="contact-links">
-        <a href="mailto:mrjayesh10@gmail.com" class="contact-link">
-          <span class="contact-link-icon">@</span>
-          mrjayesh10@gmail.com
+        <a href="mailto:contact.jayesh.dev@gmail.com" class="contact-link neon" rel="noopener">
+          <span class="contact-link-icon">&gt;_</span>
+          <span class="contact-text">contact.jayesh.dev@gmail.com</span>
         </a>
-        <a href="https://www.linkedin.com/in/jayesh-shete-a09j08/" class="contact-link" target="_blank">
-          <span class="contact-link-icon">in</span>
-          linkedin.com/in/jayesh-shete-a09j08
+        <a href="https://www.linkedin.com/in/jayesh-shete-a09j08/" class="contact-link neon blue" target="_blank" rel="noopener">
+          <span class="contact-link-icon">[in]</span>
+          <span class="contact-text">linkedin.com/in/jayesh-shete-a09j08</span>
         </a>
       </div>
     </div>
-    <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-group">
-        <label>your_name</label>
-        <input type="text" id="fname" placeholder="Full Name" required/>
-      </div>
-      <div class="form-group">
-        <label>your_email</label>
-        <input type="email" id="femail" placeholder="you@email.com" required/>
-      </div>
-      <div class="form-group">
-        <label>message</label>
-        <textarea id="fmessage" placeholder="Hi, I'd like to talk about..."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="align-self:flex-start">Send Message →</button>
-    </form>
   </div>
 </section>
 
