@@ -15,12 +15,12 @@ const HeroSection: React.FC = () => {
     <section id="hero" className="h-screen flex flex-col overflow-x-clip">
       {/* ── Navbar ── */}
       <FadeIn delay={0} y={-20}>
-        <nav className="flex items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
+        <nav className="flex items-center justify-between px-4 sm:px-6 md:px-10 pt-5 sm:pt-6 md:pt-8 gap-2">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200 no-underline"
+              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200 no-underline"
             >
               {link.label}
             </a>
@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
       </FadeIn>
 
       {/* ── Main content ── */}
-      <div className="flex-1 flex flex-col justify-between relative px-6 md:px-10">
+      <div className="flex-1 flex flex-col justify-between relative px-4 sm:px-6 md:px-10">
         {/* Heading */}
         <FadeIn delay={0.15} y={40}>
           <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5">
@@ -49,24 +49,24 @@ const HeroSection: React.FC = () => {
             <img
               src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
               alt="Jayesh Shete portrait"
-              className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] object-contain select-none"
+              className="w-[220px] sm:w-[360px] md:w-[440px] lg:w-[520px] object-contain select-none"
               draggable={false}
             />
           </Magnet>
         </FadeIn>
 
         {/* ── Bottom bar ── */}
-        <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10">
+        <div className="flex justify-between items-end pb-5 sm:pb-8 md:pb-10 gap-4">
           <FadeIn delay={0.35} y={20}>
             <p
-              className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
-              style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
+              className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[130px] sm:max-w-[220px] md:max-w-[260px]"
+              style={{ fontSize: 'clamp(0.65rem, 1.4vw, 1.5rem)' }}
             >
               a cs student driven by building full-stack apps that solve real problems
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.5} y={20}>
+          <FadeIn delay={0.5} y={20} className="flex-shrink-0">
             <ContactButton />
           </FadeIn>
         </div>

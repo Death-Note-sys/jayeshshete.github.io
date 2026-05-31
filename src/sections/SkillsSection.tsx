@@ -28,12 +28,12 @@ const SkillsSection: React.FC = () => {
   return (
     <section
       id="skills"
-      className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-20"
+      className="bg-white rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px] px-4 sm:px-8 md:px-10 py-14 sm:py-24 md:py-32 relative z-20"
     >
       <FadeIn delay={0} y={40}>
         <h2
-          className="font-black uppercase text-center text-[#0C0C0C] mb-16 sm:mb-20 md:mb-28"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="font-black uppercase text-center text-[#0C0C0C] mb-10 sm:mb-20 md:mb-28"
+          style={{ fontSize: 'clamp(2.5rem, 12vw, 160px)' }}
         >
           Skills
         </h2>
@@ -43,13 +43,13 @@ const SkillsSection: React.FC = () => {
         {skills.map((skill, i) => (
           <FadeIn key={skill.num} delay={i * 0.1} y={30}>
             <div
-              className={`flex items-start gap-6 sm:gap-8 md:gap-12 py-8 sm:py-10 md:py-12 border-t border-[rgba(12,12,12,0.15)] ${
+              className={`flex items-start gap-4 sm:gap-8 md:gap-12 py-6 sm:py-10 md:py-12 border-t border-[rgba(12,12,12,0.15)] ${
                 i === skills.length - 1 ? 'border-b border-b-[rgba(12,12,12,0.15)]' : ''
               }`}
             >
               <div
                 className="font-black text-[#0C0C0C] leading-none shrink-0"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                style={{ fontSize: 'clamp(2rem, 10vw, 140px)' }}
               >
                 {skill.num}
               </div>

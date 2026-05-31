@@ -53,7 +53,7 @@ const MarqueeSection: React.FC = () => {
             src={src}
             alt=""
             loading="lazy"
-            className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+            className="w-[280px] h-[180px] sm:w-[350px] sm:h-[225px] md:w-[420px] md:h-[270px] rounded-xl sm:rounded-2xl object-cover flex-shrink-0"
           />
         ))}
       </div>
@@ -72,7 +72,7 @@ const MarqueeSection: React.FC = () => {
             src={src}
             alt=""
             loading="lazy"
-            className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+            className="w-[280px] h-[180px] sm:w-[350px] sm:h-[225px] md:w-[420px] md:h-[270px] rounded-xl sm:rounded-2xl object-cover flex-shrink-0"
           />
         ))}
       </div>
