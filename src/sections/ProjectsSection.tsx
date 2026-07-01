@@ -6,10 +6,24 @@ import GhostButton from '../components/GhostButton'
 const projects = [
   {
     num: '01',
+    category: 'Backend · AI Pipeline',
+    title: 'NL-to-App Compiler',
+    liveUrl: 'https://compiler-pipeline.onrender.com/',
+    githubUrl: 'https://github.com/Death-Note-sys/compiler-pipeline',
+    liveLabel: 'Try It ↗',
+    images: {
+      col1Top: './images/nl-input.png',
+      col1Bottom: './images/nl-pipeline.png',
+      col2: './images/nl-output.png',
+    },
+  },
+  {
+    num: '02',
     category: 'Full Stack · Finance',
     title: 'FinanceFlow',
     liveUrl: 'https://finance-tracker-taupe-eight.vercel.app/',
     githubUrl: 'https://github.com/Death-Note-sys/finance-tracker',
+    liveLabel: 'Live App ↗',
     images: {
       col1Top: './images/ff-login.png',
       col1Bottom: './images/ff-expenses.png',
@@ -17,11 +31,12 @@ const projects = [
     },
   },
   {
-    num: '02',
+    num: '03',
     category: 'Frontend · Wellness',
     title: 'Healthify',
     liveUrl: 'https://healthify-woad.vercel.app/',
     githubUrl: 'https://github.com/Death-Note-sys/healthify',
+    liveLabel: 'Live App ↗',
     images: {
       col1Top: './images/hy-form.png',
       col1Bottom: './images/hy-plan.png',
@@ -75,7 +90,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           </div>
           <div className="flex gap-2 sm:gap-3 flex-wrap">
             <GhostButton href={project.liveUrl} target="_blank">
-              Live App ↗
+              {project.liveLabel}
             </GhostButton>
             <GhostButton href={project.githubUrl} target="_blank">
               GitHub ↗

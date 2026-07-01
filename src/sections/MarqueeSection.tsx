@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 const row1Images = [
-  './images/ff-login.png',
+  './images/nl-input.png',
   './images/ff-dashboard.png',
   './images/hy-hero.png',
+  './images/nl-output.png',
 ]
 
 const row2Images = [
   './images/ff-expenses.png',
+  './images/nl-pipeline.png',
   './images/hy-form.png',
-  './images/hy-plan.png',
+  './images/ff-login.png',
 ]
 
 const MarqueeSection: React.FC = () => {
