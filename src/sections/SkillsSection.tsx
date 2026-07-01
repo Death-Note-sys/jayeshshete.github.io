@@ -5,22 +5,27 @@ const skills = [
   {
     num: '01',
     name: 'Languages',
-    desc: 'Proficiency in C, C++, Python, and SQL — building efficient solutions from low-level programming to database management and scripting.',
+    desc: 'Proficiency in Python, JavaScript, C, C++, and SQL — from AI pipeline backends and full-stack web apps to low-level programming and database management.',
   },
   {
     num: '02',
-    name: 'Frontend',
-    desc: 'Building responsive, accessible interfaces with HTML, CSS, JavaScript, and React.js — focused on clean design and smooth user experiences.',
+    name: 'Backend & AI',
+    desc: 'Building production APIs with FastAPI and Pydantic v2. Designing multi-stage LLM pipelines with Groq and Cerebras APIs, including auto-repair, provider fallback, and deterministic schema generation.',
   },
   {
     num: '03',
-    name: 'Tools & Platforms',
-    desc: 'Streamlined development workflow using GitHub for version control, VS Code as primary IDE, Vite for fast builds, and Vercel for seamless deployments.',
+    name: 'Frontend',
+    desc: 'Creating responsive, animated interfaces with React.js, Tailwind CSS, Vite, and Framer Motion — focused on clean design, performance, and smooth user experiences.',
   },
   {
     num: '04',
+    name: 'Tools & Platforms',
+    desc: 'GitHub for version control, pytest for testing (78+ unit tests), Vercel and Render for deployments, VS Code as primary IDE, and Uvicorn for ASGI server management.',
+  },
+  {
+    num: '05',
     name: 'CS Fundamentals',
-    desc: 'Strong grasp of Data Structures, Algorithms, Object-Oriented Programming, and Database Management Systems — the foundation of every solution I build.',
+    desc: 'Strong grasp of Data Structures, Algorithms, OOP, DBMS, system design, and API architecture — the foundation behind every scalable solution I build.',
   },
 ]
 
